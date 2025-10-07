@@ -1,0 +1,41 @@
+replicaCount: 1
+
+image:
+  repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio/backend
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts: []
+  tls: []
+
+env:
+  MONGO_URI: mongodb://workout-stack-mongodb:27017/workouts
+  LOG_LEVEL: info
+
+readinessProbe:
+  path: /health
+  timeoutSeconds: 2
+
+livenessProbe:
+  path: /health
+  timeoutSeconds: 2
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

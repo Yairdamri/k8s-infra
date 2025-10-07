@@ -1,0 +1,20 @@
+workout-app:
+  fullnameOverride: backend
+  image:
+    repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
+    tag: backend-latest
+    pullPolicy: IfNotPresent
+  service:
+    port: 8000
+  env:
+    MONGO_URI: mongodb://workout-stack-mongodb:27017/workouts
+    LOG_LEVEL: info
+
+workout-frontend:
+  fullnameOverride: frontend
+  image:
+    repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
+    tag: frontend-latest
+    pullPolicy: IfNotPresent
+  service:
+    port: 80

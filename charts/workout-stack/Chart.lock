@@ -1,0 +1,9 @@
+dependencies:
+- name: workout-app
+  repository: file://../workout-app
+  version: 0.1.0
+- name: workout-frontend
+  repository: file://../workout-frontend
+  version: 0.1.0
+digest: sha256:44f6db5cda9cf08d6948b7f33bb3a6d513feda790dc37caad51f359efdbe8f80
+generated: "2025-10-08T00:47:59.036848528+03:00"
