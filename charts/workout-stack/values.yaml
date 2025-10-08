@@ -7,7 +7,7 @@ workout-app:
   service:
     port: 8000
   env:
-    MONGO_URI: mongodb://workout-stack-mongodb:27017/workouts
+    MONGO_URI: mongodb://workout:workoutpass123@mongodb-replica-set-svc:27017/workouts?authSource=admin&replicaSet=mongodb-replica-set
     LOG_LEVEL: info
 
 workout-frontend:
