@@ -1,5 +1,12 @@
 workout-app:
   replicaCount: 2
+  resources:
+    requests:
+      cpu: 250m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
   fullnameOverride: backend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
@@ -12,6 +19,13 @@ workout-app:
     LOG_LEVEL: info
 workout-frontend:
   replicaCount: 2
+  resources:
+    requests:
+      cpu: 150m
+      memory: 128Mi
+    limits:
+      cpu: 300m
+      memory: 256Mi
   fullnameOverride: frontend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
