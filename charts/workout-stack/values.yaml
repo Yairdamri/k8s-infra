@@ -1,4 +1,5 @@
 workout-app:
+  replicaCount: 2
   fullnameOverride: backend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
@@ -9,8 +10,8 @@ workout-app:
   env:
     MONGO_URI: mongodb://workout:workoutpass123@mongodb-replica-set-svc:27017/workouts?authSource=admin&replicaSet=mongodb-replica-set
     LOG_LEVEL: info
-
 workout-frontend:
+  replicaCount: 2
   fullnameOverride: frontend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
