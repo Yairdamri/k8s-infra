@@ -1,8 +1,8 @@
 workout-app:
-  replicaCount: 2
+  replicaCount: 1
   resources:
     requests:
-      cpu: 250m
+      cpu: 150m
       memory: 256Mi
     limits:
       cpu: 500m
@@ -18,13 +18,13 @@ workout-app:
     MONGO_URI: mongodb://workout:workoutpass123@mongodb-replica-set-svc:27017/workouts?authSource=admin&replicaSet=mongodb-replica-set
     LOG_LEVEL: info
 workout-frontend:
-  replicaCount: 2
+  replicaCount: 1
   resources:
     requests:
-      cpu: 150m
+      cpu: 50m
       memory: 128Mi
     limits:
-      cpu: 300m
+      cpu: 200m
       memory: 256Mi
   fullnameOverride: frontend
   image:
