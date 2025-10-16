@@ -23,9 +23,16 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           env:
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-uri
+                  key: MONGO_URI
             {{- range $key, $value := .Values.env }}
+            {{- if ne $key "MONGO_URI" }}
             - name: {{ $key }}
               value: {{ $value | quote }}
+            {{- end }}
             {{- end }}
           readinessProbe:
             httpGet:
