@@ -10,12 +10,12 @@ workout-app:
   fullnameOverride: backend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
-    tag: backend-v1.0.7
+    tag: backend-v1.1.5
     pullPolicy: IfNotPresent
   service:
     port: 8000
   env:
-    # MONGO_URI is now managed via SealedSecret (mongodb-uri secret)
+    MONGO_URI: mongodb://workout:workoutpass123@mongodb-replica-set-svc:27017/workouts?authSource=admin&replicaSet=mongodb-replica-set
     LOG_LEVEL: info
 workout-frontend:
   replicaCount: 2
@@ -29,7 +29,7 @@ workout-frontend:
   fullnameOverride: frontend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
-    tag: frontend-v1.0.7
+    tag: frontend-v1.1.5
     pullPolicy: IfNotPresent
   service:
     port: 80
