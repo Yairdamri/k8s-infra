@@ -10,7 +10,7 @@ workout-app:
   fullnameOverride: backend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
-    tag: backend-v1.0.14
+    tag: backend-v1.1.1
     pullPolicy: IfNotPresent
   service:
     port: 8000
@@ -29,7 +29,7 @@ workout-frontend:
   fullnameOverride: frontend
   image:
     repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio
-    tag: frontend-v1.0.14
+    tag: frontend-v1.1.1
     pullPolicy: IfNotPresent
   service:
     port: 80
