@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: 273809175099.dkr.ecr.ap-south-1.amazonaws.com/dev_protfolio/backend
+  repository: us-central1-docker.pkg.dev/porfolio-480111/workout-backend
   tag: latest
   pullPolicy: IfNotPresent
 
