@@ -10,7 +10,7 @@ workout-app:
   fullnameOverride: backend
   image:
     repository: us-central1-docker.pkg.dev/porfolio-480111/workout-backend/backend
-    tag: v1.0.11
+    tag: v1.0.12
     pullPolicy: IfNotPresent
   service:
     port: 8000
@@ -29,7 +29,7 @@ workout-frontend:
   fullnameOverride: frontend
   image:
     repository: us-central1-docker.pkg.dev/porfolio-480111/workout-frontend/frontend
-    tag: v1.0.11
+    tag: v1.0.12
     pullPolicy: IfNotPresent
   service:
     port: 80
