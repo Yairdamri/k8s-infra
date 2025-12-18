@@ -9,7 +9,7 @@ workout-app:
       memory: 512Mi
   fullnameOverride: backend
   image:
-    repository: us-central1-docker.pkg.dev/porfolio-480111/workout-backend/backend
+    repository: us-central1-docker.pkg.dev/porfolio-480111/workout-backend-prod/backend
     tag: v1.0.13
     pullPolicy: IfNotPresent
   service:
@@ -28,7 +28,7 @@ workout-frontend:
       memory: 256Mi
   fullnameOverride: frontend
   image:
-    repository: us-central1-docker.pkg.dev/porfolio-480111/workout-frontend/frontend
+    repository: us-central1-docker.pkg.dev/porfolio-480111/workout-frontend-prod/frontend
     tag: v1.0.13
     pullPolicy: IfNotPresent
   service:
